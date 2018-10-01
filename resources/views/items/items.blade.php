@@ -14,9 +14,16 @@
                                 <p class="item-title">{{ $item->name }}</p>
                             @endif
                             <div class="buttons text-center">
+                                <div class="btn-toolbar">
                                 @if (Auth::check())
+                                <div class="btn-group">
                                     @include('items.want_button', ['item' => $item])
+                                </div>
+                                <div class="btn-group">
+                                    @include('items.have_button', ['item' => $item])
+                                </div>
                                 @endif
+                                </div>
                             </div>
                         </div>
                     </div>
